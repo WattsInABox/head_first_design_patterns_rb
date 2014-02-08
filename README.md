@@ -6,17 +6,12 @@ I tried to keep things in line with the book so as you're following along, you c
 each commit in this repository to follow the different points. I'll set out to tag
 commits so that it is more meaningful and easier to find your place in the book.
 
-Instead of using a class or script, I use regular unit tests. To run them just execute:
-
-```ruby
-rake test
-```
 
 If you're just wanting to find your place in the book by chapter, here are the chapters
 by code namespace:
 
-Chapter 1 - Strategy
-Chapter 2... coming soon
+- Chapter 1 - Strategy
+- Chapter 2... coming soon
 
 ## Installation
 
@@ -34,7 +29,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Instead of using a class or script like the original Java examples, 
+I use regular unit tests through test-unit. To run them just execute:
+
+```ruby
+rake test
+```
 
 ## Contributing
 
