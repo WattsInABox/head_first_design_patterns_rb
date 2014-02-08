@@ -11,5 +11,9 @@ module Strategy
     def quack
       puts_and_return 'Uh... quack?'
     end
+
+    def fly
+      puts_and_return 'Flap of the wings is what you see and hear'
+    end
   end
 end

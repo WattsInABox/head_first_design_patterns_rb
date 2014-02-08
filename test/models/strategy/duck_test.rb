@@ -18,6 +18,10 @@ module Strategy
       should '#quack' do
         assert_equal 'Uh... quack?', @duck.quack
       end
+
+      should '#fly' do
+        assert_equal 'Flap of the wings is what you see and hear', @duck.fly
+      end
     end
   end
 end
