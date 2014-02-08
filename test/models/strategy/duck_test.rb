@@ -20,7 +20,7 @@ module Strategy
       end
 
       should '#fly' do
-        assert_equal 'Flap of the wings is what you see and hear', @duck.fly
+        assert_equal 'I am in flight like the Wrights', @duck.fly
       end
     end
   end

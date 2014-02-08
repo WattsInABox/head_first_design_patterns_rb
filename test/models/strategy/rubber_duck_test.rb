@@ -17,7 +17,6 @@ module Strategy
 
       should 'not #fly' do
         assert_equal 'I can\'t fly', @duck.fly
-        
       end
     end
   end
