@@ -1,11 +1,14 @@
 module Strategy
   class RubberDuck < Duck
-    def display
-      puts_and_return 'I am yellow and rubbery'
+    def initialize
+      super 
+      
+      self.fly_behavior = FlyNoWay.new
+      self.quack_behavior = Squeak.new
     end
 
-    def quack
-      puts_and_return 'If you squeeze me, I will squeak instead of quack'
+    def display
+      puts_and_return 'I am yellow and rubbery'
     end
   end
 end

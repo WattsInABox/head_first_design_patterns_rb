@@ -12,7 +12,12 @@ module Strategy
       end
 
       should '#quack (squeak) like a rubber duck' do
-        assert_equal 'If you squeeze me, I will squeak instead of quack', @duck.quack
+        assert_equal 'rubber duckie squeak', @duck.quack
+      end
+
+      should 'not #fly' do
+        assert_equal 'I can\'t fly', @duck.fly
+        
       end
     end
   end

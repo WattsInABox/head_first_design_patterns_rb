@@ -12,11 +12,11 @@ module Strategy
       end
 
       should "not #quack" do
-        assert_equal '', @duck.quack, 'Decoys should not quack'
+        assert_equal '/silence', @duck.quack, 'Decoys should not quack'
       end
 
       should "not #fly" do
-        assert_equal '', @duck.fly, 'Decoys should not fly'
+        assert_equal 'I can\'t fly', @duck.fly, 'Decoys should not fly'
       end
     end
   end
