@@ -9,4 +9,5 @@ module Strategy
 end
 
 require_relative 'fly_behavior/fly_no_way'
+require_relative 'fly_behavior/fly_rocket_powered'
 require_relative 'fly_behavior/fly_with_wings'

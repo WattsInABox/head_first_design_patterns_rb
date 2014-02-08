@@ -15,9 +15,9 @@ module Strategy
       should "gain flight later on" do
         assert_equal 'I can\'t fly', @duck.fly
 
-        @duck.fly_behavior = FlyWithWings.new
+        @duck.fly_behavior = FlyRocketPowered.new
 
-        assert_equal 'I am in flight like the Wrights', @duck.fly
+        assert_equal 'I got a rocket strapped to my back and I am flying, baby!', @duck.fly
       end
     end
   end
