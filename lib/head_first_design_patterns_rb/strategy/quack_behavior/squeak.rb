@@ -1,5 +1,7 @@
 module Strategy
-  class Squeak < QuackBehavior
+  class Squeak
+    include QuackBehavior
+    
     def quack
       puts_and_return 'rubber duckie squeak'
     end

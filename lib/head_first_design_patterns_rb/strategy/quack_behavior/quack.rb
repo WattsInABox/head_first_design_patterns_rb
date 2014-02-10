@@ -1,5 +1,7 @@
 module Strategy
-  class Quack < QuackBehavior
+  class Quack
+    include QuackBehavior
+    
     def quack
       puts_and_return 'Uh... quack?'
     end

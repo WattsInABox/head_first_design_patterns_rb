@@ -1,6 +1,8 @@
 module Strategy
   # @abstract
-  class FlyBehavior
+  module FlyBehavior
+    extend ActiveSupport::Concern
+
     # @abstract
     def fly
       raise NotImplementedError

@@ -1,6 +1,8 @@
 module Strategy
   # @abstract
-  class QuackBehavior
+  module QuackBehavior
+    extend ActiveSupport::Concern
+    
     # @abstract
     def quack
       raise NotImplementedError
