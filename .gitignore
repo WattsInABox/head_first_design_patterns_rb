@@ -18,3 +18,4 @@ tmp
 lib/head_first_design_patterns_rb/extra_credit.rb
 lib/head_first_design_patterns_rb/extra_credit/**/*.rb
 test/**/extra_credit/**/*.rb
+crosswords/
