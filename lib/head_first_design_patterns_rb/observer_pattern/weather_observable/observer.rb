@@ -4,7 +4,7 @@ module ObserverPattern
     module Observer
       extend ActiveSupport::Concern
 
-      def update(temperature, humidity, pressure)
+      def update
         raise NotImplementedError
       end
     end

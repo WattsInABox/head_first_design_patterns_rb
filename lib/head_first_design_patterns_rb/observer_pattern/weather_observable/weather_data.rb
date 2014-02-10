@@ -15,7 +15,7 @@ module ObserverPattern
 
         self.changed
 
-        notify_observers(temperature, humidity, pressure)
+        notify_observers
       end
     end
   end

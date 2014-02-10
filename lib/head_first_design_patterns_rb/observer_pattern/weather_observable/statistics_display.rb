@@ -5,11 +5,11 @@ module ObserverPattern
       include Observer
 
       attr_accessor :average_temperature, :max_temperature, :min_temperature, 
-        :temperature_readings, :weather_data
+        :temperature_readings, :observable
 
-      def initialize(weather_data)
-        self.weather_data = weather_data
-        self.weather_data.add_observer(self)
+      def initialize(observable)
+        self.observable = observable
+        self.observable.add_observer(self)
 
         self.average_temperature = 0
         self.max_temperature = 0
@@ -21,8 +21,8 @@ module ObserverPattern
         puts_and_return "Avg/Max/Min temperature #{average_temperature}/#{max_temperature}/#{min_temperature}"
       end
 
-      def update(temperature, humidity, pressure)
-        self.temperature_readings << temperature
+      def update
+        self.temperature_readings << observable.temperature
         self.average_temperature = temperature_readings.inject(:+) / temperature_readings.count.to_f
         self.min_temperature = temperature_readings.min
         self.max_temperature = temperature_readings.max

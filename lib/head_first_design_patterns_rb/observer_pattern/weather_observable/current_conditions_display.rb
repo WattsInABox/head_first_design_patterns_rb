@@ -4,20 +4,20 @@ module ObserverPattern
       include DisplayElement
       include Observer
 
-      attr_accessor :temperature, :humidity, :weather_data
+      attr_accessor :temperature, :humidity, :observable
 
-      def initialize(weather_data)
-        self.weather_data = weather_data
-        self.weather_data.add_observer(self)
+      def initialize(observable)
+        self.observable = observable
+        self.observable.add_observer(self)
       end
 
       def display
         puts_and_return "Current conditions are: #{temperature} F degrees, #{humidity}% humidity"
       end
 
-      def update(temperature, humidity, pressure)
-        self.temperature = temperature
-        self.humidity = humidity
+      def update
+        self.temperature = observable.temperature
+        self.humidity = observable.humidity
       end
     end
   end

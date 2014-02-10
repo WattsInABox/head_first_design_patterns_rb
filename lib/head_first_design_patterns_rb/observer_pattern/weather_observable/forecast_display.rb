@@ -4,11 +4,11 @@ module ObserverPattern
       include DisplayElement
       include Observer
 
-      attr_accessor :current_pressure, :last_pressure, :weather_data
+      attr_accessor :current_pressure, :last_pressure, :observable
 
-      def initialize(weather_data)
-        self.weather_data = weather_data
-        self.weather_data.add_observer(self)
+      def initialize(observable)
+        self.observable = observable
+        self.observable.add_observer(self)
 
         self.current_pressure = 29.92
       end
@@ -23,9 +23,9 @@ module ObserverPattern
         end
       end
 
-      def update(temperature, humidity, pressure)
+      def update
         self.last_pressure = current_pressure
-        self.current_pressure = pressure
+        self.current_pressure = observable.pressure
       end
     end
   end

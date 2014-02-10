@@ -4,21 +4,20 @@ module ObserverPattern
       include DisplayElement
       include Observer
 
-      attr_accessor :heat_index, :weather_data
+      attr_accessor :heat_index, :observable
 
-      def initialize(weather_data)
-        self.weather_data = weather_data
-        self.weather_data.add_observer(self)
+      def initialize(observable)
+        self.observable = observable
+        self.observable.add_observer(self)
       end
 
       def display
         "Heat index is #{heat_index}"
       end
 
-      # @param t [Integer] temperature
-      # @param rh [Integer] humidity
-      # @param p [Integer] pressure
-      def update(t, rh, p)
+      def update
+        t = observable.temperature
+        rh = observable.humidity
         self.heat_index = ((16.923 + (0.185212 * t) + (5.37941 * rh) - 
             (0.100254 * t * rh) + (0.00941695 * (t * t)) + 
             (0.00728898 * (rh * rh)) + (0.000345372 * (t * t * rh)) - 
