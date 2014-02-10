@@ -1,3 +1,4 @@
+# Object monkey patches
 class Object
   # #puts the arguments as expected, but also returns the first argument instead of nil
   # This helps a lot with all the tests for this very simple series of apps we're building.
